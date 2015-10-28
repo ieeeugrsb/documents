@@ -97,6 +97,9 @@
     \scshape
     }{}{0pt}{}[{\titlerule[1pt]}]
 
+% Set only one number for subsections
+\renewcommand{\thesubsection}{\arabic{subsection}}
+
 % Start!
 \begin{document}
     % Page style
@@ -107,7 +110,7 @@
     \maketitle
 
     % Date, participantes and location info.
-    En Granada, siendo las 11:30 horas del \Date~se encuentran reunidos:
+    En Granada, siendo las XX:XX horas del \Date~se encuentran reunidos:
     \begin{itemize}
         \item
     \end{itemize}
@@ -117,16 +120,31 @@
 
     \section{Orden del día}
     \begin{enumerate}
-        \item
+        \item Aprobación del acta anterior
     \end{enumerate}
 
 
     \section{Desarrollo de la sesión}
-
+    \subsection{Aprobacion del acta anterior}
+    Se aprueba por unanimidad el acta de la sesión anterior.
 
 
     \section{Ruegos, sugerencias y preguntas}
 
 
+    \clearpage
+    Siendo las YY:YY horas del mismo día se da por terminada la sesión.
 
+    A \Date.
+    \vspace{10mm}
+    \ctable[pos = h, width = 140 mm]{XX}{}{
+        El Secretario & VB del Presidente \NN
+                      &                   \NN
+                      &                   \NN
+                      &                   \NN
+                      &                   \NN
+                      &                   \NN
+                      &                   \NN
+        Fdo.: \Author & Fdo.: PRESIDENT NAME
+    }
 \end{document}
