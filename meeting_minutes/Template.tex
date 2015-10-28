@@ -34,25 +34,36 @@
 \usepackage{subcaption}         % For subfigures
 \usepackage{fancyhdr}           % For headers and footers
 \usepackage{xcolor}             % Colors everywhere
+\usepackage{titlesec}           % For customize the title format
 
 % Document properties
-\author{SECRETARY NAME}
-\title{MEETING NAME}
-\date{MEETING DATE}
+\makeatletter
+\author{SECRETARY NAME}     \let\Author\@author
+\title{MEETING NAME}        \let\Title\@title
+\date{MEETING DATE}         \let\Date\@date
+\makeatother
+
 \hypersetup{
-    pdfauthor = {SECRETARY NAME (SECRETARY EMAIL)},
-    pdftitle  = {MEETING NAME},
+    pdfauthor = {\Author},
+    pdftitle  = {\Title},
     pdfsubject  = {},
     pdfkeywords = {meeting, ieee},
     pdfcreator  = {TeXLive distro and Atom text editor},
     pdfproducer = {pdflatex}
 }
 
+% Define custom colors
+\definecolor{BlueTitle}{HTML}{2E5395}
+
 % Define the style for header and footer
 \newcommand{\fncymain}{%
     \setlength{\headheight}{85pt}
-    \fancyhead[C]{\includegraphics[height=0.10\textheight,keepaspectratio]{logo_header.png}}
+    \fancyhead[RO,LO,RE,LE]{}
+    \fancyhead[C]{
+        \includegraphics[height=0.10\textheight,keepaspectratio]
+            {logo_header.png}}
     \renewcommand{\headrulewidth}{0pt}
+
     \fancyfoot[C]{
         \centering
         \textbf{IEEE Student Branch of Granada} \\
@@ -61,29 +72,61 @@
         E-mail: \href{mailto:ieeegranada@ieee.org}{ieeegranada@ieee.org}  \\
         Web: \url{http://ieee-urg.org}
     }
-
-    \definecolor{BlueTitle}{HTML}{2E5395}
 }
 
-% Start!
-\begin{document}
-    \pagestyle{fancy}
-    \fncymain{}
-
+% Create the document title
+\renewcommand{\maketitle}{
     {
         \Huge
         \color{BlueTitle}
         \centering
+        \bfseries
+        \scshape
         \hrulefill \\
-        \textsc{\textbf{Meeting Name}} \\
+        \Title \\
         \hrulefill
     }
+}
 
-    En Granada, siendo las 12:30 horas del 28 de Octubre de 2015 se encuentran reunidos:
+% Set the section format
+\titleformat{\section}[display]{
+    \LARGE
+    \color{BlueTitle}
+    \filcenter
+    \bfseries
+    \scshape
+    }{}{0pt}{}[{\titlerule[1pt]}]
+
+% Start!
+\begin{document}
+    % Page style
+    \pagestyle{fancy}
+    \fncymain{}
+
+    % Add the title
+    \maketitle
+
+    % Date, participantes and location info.
+    En Granada, siendo las 11:30 horas del \Date~se encuentran reunidos:
     \begin{itemize}
-        \item Benito Palacios Sánchez
+        \item
     \end{itemize}
 
-    Asiste como invitado:
+    Asiste como invitado .
+
+
+    \section{Orden del día}
+    \begin{enumerate}
+        \item
+    \end{enumerate}
+
+
+    \section{Desarrollo de la sesión}
+
+
+
+    \section{Ruegos, sugerencias y preguntas}
+
+
 
 \end{document}
