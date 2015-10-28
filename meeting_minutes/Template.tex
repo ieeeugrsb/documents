@@ -1,0 +1,89 @@
+% Copyright (c) 2015 IEEE Student Branch of Granada - All Rights Reserved.
+% This work is licensed under the Creative Commons Attribution 4.0
+% International License. To view a copy of this license, visit
+% http://creativecommons.org/licenses/by/4.0/.
+
+% Template
+\documentclass[12pt,twoside,openany,a4paper]{book}
+\pdfoutput=1
+
+% Margins
+\usepackage[a4paper,top=1cm,bottom=6cm]{geometry}
+
+% Paragraphs
+\usepackage{parskip}            % For paragraph separation
+\setlength{\parindent}{15pt}    % Paragraph indentation
+\widowpenalties=1 10000         % No page break in inside pragraph
+\raggedbottom{}
+
+% Font
+\usepackage[T1]{fontenc}        % Output font
+\usepackage[utf8]{inputenc}     % Input encoding
+\usepackage[english,spanish]{babel} % For Spanish texts
+\usepackage{FiraSans}           % Use a better font
+
+% Extra packages
+\usepackage{graphicx}           % For graphics
+\usepackage{verbatim}           % For non-parsed text blocks
+\usepackage{microtype}          % Improve PDF text lines
+\usepackage{indentfirst}        % Indent first paragraph too
+\usepackage{hyperref}           % For intenal and external links
+\usepackage[hypcap]{caption}    % For captions
+\usepackage{ctable}             % For tables
+\usepackage{float}              % For table positions
+\usepackage{subcaption}         % For subfigures
+\usepackage{fancyhdr}           % For headers and footers
+\usepackage{xcolor}             % Colors everywhere
+
+% Document properties
+\author{SECRETARY NAME}
+\title{MEETING NAME}
+\date{MEETING DATE}
+\hypersetup{
+    pdfauthor = {SECRETARY NAME (SECRETARY EMAIL)},
+    pdftitle  = {MEETING NAME},
+    pdfsubject  = {},
+    pdfkeywords = {meeting, ieee},
+    pdfcreator  = {TeXLive distro and Atom text editor},
+    pdfproducer = {pdflatex}
+}
+
+% Define the style for header and footer
+\newcommand{\fncymain}{%
+    \setlength{\headheight}{85pt}
+    \fancyhead[C]{\includegraphics[height=0.10\textheight,keepaspectratio]{logo_header.png}}
+    \renewcommand{\headrulewidth}{0pt}
+    \fancyfoot[C]{
+        \centering
+        \textbf{IEEE Student Branch of Granada} \\
+        Campues Fuentenueva. E.T.S.I. de Caminos, Canales y Puertos \\
+        Planta -1. Despacho n.13. 18071 Granada \\
+        E-mail: ieeegranada@ieee.org \\
+        Web: \url{http://ieee-urg.org}
+    }
+
+    \definecolor{BlueTitle}{HTML}{2E5395}
+}
+
+% Start!
+\begin{document}
+    \pagestyle{fancy}
+    \fncymain{}
+
+    {
+        \Huge
+        \color{BlueTitle}
+        \centering
+        \hrulefill \\
+        \textbf{MEETING NAME} \\
+        \hrulefill
+    }
+
+    En Granada, siendo las 12:30 horas del 28 de Octubre de 2015 se encuentran reunidos:
+    \begin{itemize}
+        \item Benito Palacios Sánchez
+    \end{itemize}
+
+    Asiste como invitado:
+
+\end{document}
