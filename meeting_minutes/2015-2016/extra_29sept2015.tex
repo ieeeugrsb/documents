@@ -1,0 +1,208 @@
+% Copyright (c) 2015 IEEE Student Branch of Granada - All Rights Reserved.
+% This work is licensed under the Creative Commons Attribution 4.0
+% International License. To view a copy of this license, visit
+% http://creativecommons.org/licenses/by/4.0/.
+
+% Template
+\documentclass[12pt,twoside,openany,a4paper]{book}
+\pdfoutput=1
+
+% Margins
+\usepackage[a4paper,top=1cm,bottom=6cm]{geometry}
+
+% Paragraphs
+\usepackage{parskip}            % For paragraph separation
+\setlength{\parindent}{15pt}    % Paragraph indentation
+\widowpenalties=1 10000         % No page break in inside pragraph
+\raggedbottom{}
+
+% Font
+\usepackage[T1]{fontenc}        % Output font
+\usepackage[utf8]{inputenc}     % Input encoding
+\usepackage[english,spanish]{babel} % For Spanish texts
+\usepackage{FiraSans}           % Use a better font
+
+% Extra packages
+\usepackage{graphicx}           % For graphics
+\usepackage{verbatim}           % For non-parsed text blocks
+\usepackage{microtype}          % Improve PDF text lines
+\usepackage{indentfirst}        % Indent first paragraph too
+\usepackage{hyperref}           % For intenal and external links
+\usepackage[hypcap]{caption}    % For captions
+\usepackage{ctable}             % For tables
+\usepackage{float}              % For table positions
+\usepackage{subcaption}         % For subfigures
+\usepackage{fancyhdr}           % For headers and footers
+\usepackage{xcolor}             % Colors everywhere
+\usepackage{titlesec}           % For customize the title format
+
+% Document properties
+\makeatletter
+\author{Benito Palacios Sánchez}     \let\Author\@author
+\title{Asamblea General Extraordinaria}        \let\Title\@title
+\date{29 de septiembre de 2015}         \let\Date\@date
+\makeatother
+
+\hypersetup{
+    pdfauthor = {\Author},
+    pdftitle  = {\Title},
+    pdfsubject  = {},
+    pdfkeywords = {meeting, ieee},
+    pdfcreator  = {TeXLive distro and Atom text editor},
+    pdfproducer = {pdflatex}
+}
+
+% Define custom colors
+\definecolor{BlueTitle}{HTML}{2E5395}
+
+% Define the style for header and footer
+\newcommand{\fncymain}{%
+    \setlength{\headheight}{85pt}
+    \fancyhead[RO,LO,RE,LE]{}
+    \fancyhead[C]{
+        \includegraphics[height=0.10\textheight,keepaspectratio]
+            {../logo_header.png}}
+    \renewcommand{\headrulewidth}{0pt}
+
+    \fancyfoot[C]{
+        \centering
+        \textbf{IEEE Student Branch of Granada} \\
+        Campus Fuentenueva. Facultad de Ciencias. Severo Ochoa, S/N. \\
+        Sala de alumnos. 18001, Granada, España. \\
+        E-mail: \href{mailto:ieeegranada@ieee.org}{ieeegranada@ieee.org}  \\
+        Web: \url{http://ieee-urg.org}
+    }
+}
+
+% Create the document title
+\renewcommand{\maketitle}{
+    {
+        \Huge
+        \color{BlueTitle}
+        \centering
+        \bfseries
+        \scshape
+        \hrulefill \\
+        \Title \\
+        \hrulefill
+    }
+}
+
+% Set the section format
+\titleformat{\section}[display]{
+    \LARGE
+    \color{BlueTitle}
+    \filcenter
+    \bfseries
+    \scshape
+    }{}{0pt}{}[{\titlerule[1pt]}]
+
+% Set only one number for subsections
+\renewcommand{\thesubsection}{\arabic{subsection}}
+
+% Start!
+\begin{document}
+    % Page style
+    \pagestyle{fancy}
+    \fncymain{}
+
+    % Add the title
+    \maketitle
+
+    % Date, participantes and location info.
+    En Granada, siendo las 10:15 horas del \Date~se encuentran reunidos:
+    \begin{itemize}
+        \item Benito Palacios Sánchez
+        \item Julian Fernández Ortiz
+        \item Nicolas Guerrero García
+        \item Sulaimane Mezzouji
+    \end{itemize}
+
+
+    \section{Orden del día}
+    \begin{enumerate}
+        \item Elecciones a la Junta Directiva
+        \item Aprobación del nuevo logo
+        \item Cambio de domicilio de la sede
+    \end{enumerate}
+
+
+    \section{Desarrollo de la sesión}
+    \subsection{Elecciones a la Junta Directiva}
+    Convocada por el presidente actual Sulaimane Mezzouji se inicia el proceso de elecciones de cargos de la Junta Directiva. Se cuenta con el voto mediante correo electrónico firmado digitalmente del socio Rafael Bailón Ruiz.
+
+    \subsubsection{Presidencia}
+    \noindent Los candidatos para el cargo de Presidente son:
+    \begin{itemize}
+        \item Sulaimane Mezzouji
+    \end{itemize}
+    Se procede a la votación mediante mano alzada. El recuento es:
+    \ctable[pos = H]{lccc}{}{                                               \FL
+        Candidato               & A favor & En contra & Abstenciones        \ML
+        Sulaimane Mezzouji      & 5       & 0         & 0                   \LL
+    }
+    \noindent{}La asamblea aprueba por unanimidad a Sulaimane Mezzouji como presidente.
+
+    \subsubsection{Secretaría}
+    \noindent Los candidatos para el cargo de Secretario son:
+    \begin{itemize}
+        \item Benito Palacios Sánchez
+        \item Sulaimane Mezzouji
+    \end{itemize}
+    Se procede a la votación mediante mano alzada. El recuento es:
+    \ctable[pos = H]{lccc}{}{                                               \FL
+        Candidato               & A favor & En contra & Abstenciones        \ML
+        Benito Palacios Sánchez & 4       & 0         & 1                   \NN
+        Sulaimane Mezzouji      & 0       & 0         & 0                   \LL
+    }
+    \noindent{}La asamblea aprueba a Benito Palacios Sánchez como secretario.
+
+    \subsubsection{Tesorería}
+    \noindent Los candidatos para el cargo de Tesorero son:
+    \begin{itemize}
+        \item Julián Fernández Ortiz
+        \item Sulaimane Mezzouji
+    \end{itemize}
+    Se procede a la votación mediante mano alzada. El recuento es:
+    \ctable[pos = H]{lccc}{}{                                               \FL
+        Candidato               & A favor & En contra & Abstenciones        \ML
+        Julián Fernández Ortiz  & 4       & 0         & 1                   \NN
+        Sulaimane Mezzouji      & 0       & 0         & 0                   \LL
+    }
+    \noindent{}La asamblea aprueba a Julián Fernández Ortiz como tesorero.
+
+    \subsubsection{Nombramiento de la Junta Directiva}
+    Se constituye una nueva junta directiva aprobada por la asamblea y formada por los socios:
+    \begin{itemize}
+        \item Sulaimane Mezzouji: Presidente.
+        \item Julián Fernández Ortiz: Tesorero.
+        \item Benito Palacios Sánchez: Secretario.
+    \end{itemize}
+
+    \subsection{Aprobación del nuevo logo}
+    El socio Sulaimane Mezzouji propone cambiar el logo de la rama estudiantil. La propuesta se encuentra adjunta en el Anexo~\ref{app:logo}. El nuevo logo se aprueba por unanimidad.
+
+    \subsection{Cambio de domicilio de la sede}
+    La rama estudiantil cuenta con la disponibilidad de una sede en la sala de alumnos de la Facultad de Ciencias. Se aprueba por unanimidad el cambio de domicilio de la sede a la nueva localización. La nueva dirección completa es: Campus Fuentenueva. Facultad de Ciencias. Severo Ochoa, S/N. Sala de alumnos. 18001, Granada, España.
+
+    \clearpage
+    Siendo las 11:09 horas del mismo día se da por terminada la sesión.
+
+    A \Date.
+    \vspace{10mm}
+    \ctable[pos = h, width = 140 mm]{XX}{}{
+        El Secretario & VB del Presidente \NN
+                      &                   \NN
+                      &                   \NN
+                      &                   \NN
+                      &                   \NN
+                      &                   \NN
+                      &                   \NN
+        Fdo.: \Author & Fdo.: Sulaimane Mezzouji
+    }
+
+    \appendix
+    \chapter{Propuesta de nuevo logo}
+    \label{app:logo}
+    \includegraphics{./extra_29sept2015_appendix1.png}
+\end{document}
