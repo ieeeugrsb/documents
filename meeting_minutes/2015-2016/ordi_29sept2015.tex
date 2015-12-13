@@ -1,0 +1,218 @@
+% Copyright (c) 2015 IEEE Student Branch of Granada - All Rights Reserved.
+% This work is licensed under the Creative Commons Attribution 4.0
+% International License. To view a copy of this license, visit
+% http://creativecommons.org/licenses/by/4.0/.
+
+% Template
+\documentclass[12pt,twoside,openany,a4paper]{book}
+\pdfoutput=1
+
+% Margins
+\usepackage[a4paper,top=1cm,bottom=6cm]{geometry}
+
+% Paragraphs
+\usepackage{parskip}            % For paragraph separation
+\setlength{\parindent}{15pt}    % Paragraph indentation
+\widowpenalties=1 10000         % No page break in inside pragraph
+\raggedbottom{}
+
+% Font
+\usepackage[T1]{fontenc}        % Output font
+\usepackage[utf8]{inputenc}     % Input encoding
+\usepackage[english,spanish]{babel} % For Spanish texts
+\usepackage{FiraSans}           % Use a better font
+
+% Extra packages
+\usepackage{graphicx}           % For graphics
+\usepackage{verbatim}           % For non-parsed text blocks
+\usepackage{microtype}          % Improve PDF text lines
+\usepackage{indentfirst}        % Indent first paragraph too
+\usepackage{hyperref}           % For intenal and external links
+\usepackage[hypcap]{caption}    % For captions
+\usepackage{ctable}             % For tables
+\usepackage{float}              % For table positions
+\usepackage{subcaption}         % For subfigures
+\usepackage{fancyhdr}           % For headers and footers
+\usepackage{xcolor}             % Colors everywhere
+\usepackage{titlesec}           % For customize the title format
+
+% Document properties
+\makeatletter
+\author{Benito Palacios Sánchez}        \let\Author\@author
+\title{Asamblea General Ordinaria}      \let\Title\@title
+\date{29 de septiembre de 2015}         \let\Date\@date
+\makeatother
+
+\hypersetup{
+    pdfauthor = {\Author},
+    pdftitle  = {\Title},
+    pdfsubject  = {},
+    pdfkeywords = {meeting, ieee},
+    pdfcreator  = {TeXLive distro and Atom text editor},
+    pdfproducer = {pdflatex}
+}
+
+% Define custom colors
+\definecolor{BlueTitle}{HTML}{2E5395}
+
+% Define the style for header and footer
+\newcommand{\fncymain}{%
+    \setlength{\headheight}{85pt}
+    \fancyhead[RO,LO,RE,LE]{}
+    \fancyhead[C]{
+        \includegraphics[height=0.10\textheight,keepaspectratio]
+            {../logo_header.png}}
+    \renewcommand{\headrulewidth}{0pt}
+
+    \fancyfoot[C]{
+        \centering
+        \textbf{IEEE Student Branch of Granada} \\
+        Campus Fuentenueva. Facultad de Ciencias. Severo Ochoa, S/N. \\
+        Sala de alumnos. 18001, Granada, España. \\
+        E-mail: \href{mailto:ieeegranada@ieee.org}{ieeegranada@ieee.org}  \\
+        Web: \url{http://ieee-urg.org}
+    }
+}
+
+% Create the document title
+\renewcommand{\maketitle}{
+    {
+        \Huge
+        \color{BlueTitle}
+        \centering
+        \bfseries
+        \scshape
+        \hrulefill \\
+        \Title \\
+        \hrulefill
+    }
+}
+
+% Set the section format
+\titleformat{\section}[display]{
+    \LARGE
+    \color{BlueTitle}
+    \filcenter
+    \bfseries
+    \scshape
+    }{}{0pt}{}[{\titlerule[1pt]}]
+
+% Set only one number for subsections
+\renewcommand{\thesubsection}{\arabic{subsection}}
+
+% Start!
+\begin{document}
+    % Page style
+    \pagestyle{fancy}
+    \fncymain{}
+
+    % Add the title
+    \maketitle
+
+    % Date, participantes and location info.
+    En Granada, siendo las 10:40 horas del \Date~se encuentran reunidos:
+    \begin{itemize}
+        \item Benito Palacios Sánchez
+        \item Julian Fernández Ortiz
+        \item Nicolas Guerrero García
+        \item Sulaimane Mezzouji
+    \end{itemize}
+
+
+    \section{Orden del día}
+    \begin{enumerate}
+        \item IEEEXtreme 9.0.
+        \item Proyectos Wall-E y Eva.
+        \item Jornadas de recepción de estudiantes.
+        \item Jornadas itinerantes.
+        \item Reunión de asociaciones.
+        \item Charlas informativas en grados.
+        \item Patrocinadores.
+        \item Publicidad.
+        \item Geohashing.
+    \end{enumerate}
+
+
+    \section{Desarrollo de la sesión}
+    \subsection{IEEEXtreme 9.0}
+    Benito comienza a comentar el estado actual de la preparación del evento IEEEXtreme 9.0. Mañana, día 30 de septiembre a las 12:30, se realizará una charla informativa en la Escuela Técnica Superior de Ingenierías Informática y de Telecomunicación. Los carteles informátivos para la charla ya se han expuesto en la escuela. También informa de que se está en proceso de buscar un \textit{proctor}. Se trata de un profesor que estará a cargo de los equipos que se presenten a la competición. Así mismo, hay planificado una sesión de preparación para el fin de semana del 17 al 18 de octubre.
+
+    Sulaimane añade que hay confirmación de parte de la residencia de estudiantes Carlos V para la realización del evento en la misma. Habrá que realizar cartelería para exponer el evento en la residencia.
+
+    Finalmente Julián comenta que realizará otra charla informativa en la Facultad de Ciencias próximamente.
+
+    \subsubsection{Multi Timelapse}
+    Nuestra rama ha propuesto a la coordinación de ramas españolas la realización de un \textit{time-lapse} conjunto. Tras la finalización del evento se formará una vídeo que reúna cada uno de ellos. Con el objetivo de facilitar y estandarizar los videos, Benito propondrá una serie de \textit{scripts}.
+
+    \subsection{Proyectos Wall-E y Eva}
+    Benito comienza a detallar el estado del proyecto de brazo robótico \textit{Wall-E}. Las comunicaciones están terminadas y a la espera de ser configuradas entre ambos proyectos. La movilidad del brazo y la estructura del coche se encuentran a la espera de tener lista una impresora 3D para imprimir las piezas. Sulaimane comenta que la impresora está cerca de ser terminada y que se está trabajando en arreglar unas piezas que no encajan. Nicolás propone imprimirla de nuevo. También añade que solo falta por probar las piezas de la base, el resto ya las pudo probar.
+
+    Respecto al proyecto de Eva, Sulaimane recomienda rehacer el proyecto y realizar una transición con los miembros que sean activos. Benito comenta que ha creado una serie de esquemáticos sobre el estado actual de los circuitos. Así mismo, ha redocumentado y organizado el software de comunicación con la IMU y motores. Se llega al consenso de que el siguiente paso en este proyecto sería estudiar las ecuaciones de movimiento para implementar un control de estabilidad PID.
+
+    Respecto a estos proyecto, se decide realizar una nueva estructuración de los equipos quedando de la siguiente forma:
+    \begin{itemize}
+        \item Wall-E
+        \begin{itemize}
+            \item Julián
+            \item Nicolás
+        \end{itemize}
+        \item Eva
+        \begin{itemize}
+            \item Sulaimane
+            \item Benito
+        \end{itemize}
+    \end{itemize}
+
+    Sulaimane añade que el objetivo de la rama debería ser poder terminar estos proyectos durante este curso académico. Además contamos con una insoladora.
+
+
+    \subsection{Jornadas de recepción de estudiantes}
+    Las jornadas de recepción de estudiantes se celebrarán los días 14 y 15 de octubre. Dado que solo hay dos socios disponibles para estar en el stand los dos días y la rama no dispone de mucho material para mostrar, se vota y decide por unanimidad no realizar dicha actividad.
+
+
+    \subsection{Jornada itinerante}
+    La jornada itinerante se realizará el día 13 de octubre. Hay dos socios disponibles para realizarlas. Se vota y decide por unanimidad realizarlas. Se proponen como talleres iniciación al uso de Arduino, Google Cardboard e impresoras 3D.
+
+
+    \subsection{Reunión de asociaciones}
+    La reunión de asociaciones convocada próximanente será para dar a conocer la jornada itinerante. Dado que se dispone de dicha información se decide que no es necesaria nuestra participación en la reunión.
+
+
+    \subsection{Charlas informativas en grados}
+    El año pasado se realizaron algunas presentaciones de nuestra rama estudiantil a los estudiantes del Grado en Ingeniería Industrial. Se decide aprovechar las charlas sobre el evento IEEEXtreme 9.0 para introducir nuestra rama también.
+
+
+    \subsection{Patrocinadores}
+    El aspecto de la búsqueda de patrocinadores lo habrará el presidente junto al tesorero.
+
+
+    \subsection{Publicidad}
+    Se propone la realización de materiales de publicidad de nuestra rama, tales como casmisetas, polos y carteles. Se comenta que no se dispone de dinero para producirlo pero que se ha pedido a IEEE un kit de publicidad que llevará próximamente.
+
+
+    \subsection{Geohashing}
+    Benito propone realizar una actividad de Geohashing. Se trata de conseguir llegar a unas coordenadas generadas aleatoriamente cada día por un algoritmo. Tras realizar una votación se deniega dicha actividad con 2 votos en contra, 1 a favor y 1 abstención.
+
+
+    \section{Ruegos, sugerencias y preguntas}
+    \begin{itemize}
+        \item Sulaimane comenta que se dispone de una tarjeta electrónica para acceder a la facultad por Sábados.
+    \end{itemize}
+
+
+    \clearpage
+    Siendo las 11:09 horas del mismo día se da por terminada la sesión.
+
+    A \Date.
+    \vspace{10mm}
+    \ctable[pos = h, width = 140 mm]{XX}{}{
+        El Secretario & VB del Presidente \NN
+                      &                   \NN
+                      &                   \NN
+                      &                   \NN
+                      &                   \NN
+                      &                   \NN
+                      &                   \NN
+        Fdo.: \Author & Fdo.: Sulaimane Mezzouji
+    }
+\end{document}
