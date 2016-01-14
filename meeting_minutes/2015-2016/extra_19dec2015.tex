@@ -1,0 +1,189 @@
+% Copyright (c) 2015 IEEE Student Branch of Granada - All Rights Reserved.
+% This work is licensed under the Creative Commons Attribution 4.0
+% International License. To view a copy of this license, visit
+% http://creativecommons.org/licenses/by/4.0/.
+
+% Template
+\documentclass[12pt,twoside,openany,a4paper]{book}
+\pdfoutput=1
+
+% Margins
+\usepackage[a4paper,top=1cm,bottom=6cm]{geometry}
+
+% Paragraphs
+\usepackage{parskip}            % For paragraph separation
+\setlength{\parindent}{15pt}    % Paragraph indentation
+\widowpenalties=1 10000         % No page break in inside pragraph
+\raggedbottom{}
+
+% Font
+\usepackage[T1]{fontenc}        % Output font
+\usepackage[utf8]{inputenc}     % Input encoding
+\usepackage[english,spanish]{babel} % For Spanish texts
+\usepackage{FiraSans}           % Use a better font
+
+% Extra packages
+\usepackage{graphicx}           % For graphics
+\usepackage{verbatim}           % For non-parsed text blocks
+\usepackage{microtype}          % Improve PDF text lines
+\usepackage{indentfirst}        % Indent first paragraph too
+\usepackage{hyperref}           % For intenal and external links
+\usepackage[hypcap]{caption}    % For captions
+\usepackage{ctable}             % For tables
+\usepackage{float}              % For table positions
+\usepackage{subcaption}         % For subfigures
+\usepackage{fancyhdr}           % For headers and footers
+\usepackage{xcolor}             % Colors everywhere
+\usepackage{titlesec}           % For customize the title format
+
+% Document properties
+\makeatletter
+\author{Benito Palacios Sánchez}     \let\Author\@author
+\title{Asamblea Extradinaria}        \let\Title\@title
+\date{19 de diciembre de 2015}         \let\Date\@date
+\makeatother
+
+\hypersetup{
+    pdfauthor = {\Author},
+    pdftitle  = {\Title},
+    pdfsubject  = {},
+    pdfkeywords = {meeting, ieee},
+    pdfcreator  = {TeXLive distro and Atom text editor},
+    pdfproducer = {pdflatex}
+}
+
+% Define custom colors
+\definecolor{BlueTitle}{HTML}{2E5395}
+
+% Define the style for header and footer
+\newcommand{\fncymain}{%
+    \setlength{\headheight}{85pt}
+    \fancyhead[RO,LO,RE,LE]{}
+    \fancyhead[C]{
+        \includegraphics[height=0.10\textheight,keepaspectratio]
+            {../logo_header.png}}
+    \renewcommand{\headrulewidth}{0pt}
+
+    \fancyfoot[C]{
+        \centering
+        \textbf{IEEE Student Branch of Granada} \\
+        Campus Fuentenueva. Facultad de Ciencias. Severo Ochoa, S/N. \\
+        Sala de alumnos. 18001, Granada, España. \\
+        E-mail: \href{mailto:ieeegranada@ieee.org}{ieeegranada@ieee.org}  \\
+        Web: \url{http://ieee-urg.org}
+    }
+}
+
+% Create the document title
+\renewcommand{\maketitle}{
+    {
+        \Huge
+        \color{BlueTitle}
+        \centering
+        \bfseries
+        \scshape
+        \hrulefill \\
+        \Title \\
+        \hrulefill
+    }
+}
+
+% Set the section format
+\titleformat{\section}[display]{
+    \LARGE
+    \color{BlueTitle}
+    \filcenter
+    \bfseries
+    \scshape
+    }{}{0pt}{}[{\titlerule[1pt]}]
+
+% Set only one number for subsections
+\renewcommand{\thesubsection}{\arabic{subsection}}
+
+% Start!
+\begin{document}
+    % Page style
+    \pagestyle{fancy}
+    \fncymain{}
+
+    % Add the title
+    \maketitle
+
+    % Date, participantes and location info.
+    En Granada, siendo las 11:07 horas del \Date~se encuentran reunidos: 12 socios.
+
+
+    \section{Orden del día}
+    \begin{enumerate}
+        \item Nueva pagina web de la rama.
+        \item Tipos de socio.
+        \item Cambios en los estatutos.
+        \item Elecciones.
+        \item Análisis general de la rama.
+    \end{enumerate}
+
+
+    \section{Desarrollo de la sesión}
+    \subsection{Aprobacion del acta anterior}
+    Se aprueba por unanimidad el acta de la sesión anterior.
+
+    \subsection{Nueva pagina web.}
+    Sulaimane presenta la nueva pagina web y explica que la zona miembros será un espacio privado al que se accederá mediante una contraseña comunicada a cada socio previamente.
+
+    \subsection{Tipos de socio}
+    El presidente propone los siguientes tipos de socios, no excluyentes.
+    \begin{itemize}
+        \item Socios fundadores: socios que fundaron la rama en sus orígenes.
+
+        \item Socios de números: El estatus se aprueba por la junta directiva.
+            \begin{itemize}
+                \item Socios de número voluntarios: personas que no siendo socios de IEEE, la junta directiva aprueba que puedan formar parte de la rama y sus actividades, siempre y cuando no entren en conflictos por los requisitos establecidos por IEEE en aquellas actividades exclusivas.
+
+                \item Socios de número de IEEE: personas socios de IEEE que pagan la cuota anualmente. Se incluye \textit{Undergraduate Student Member}, \textit{Graduate Student Member} y \textit{Young Professionals}.
+            \end{itemize}
+
+        \item Socios de honor: se determinará por asamblea general.
+    \end{itemize}
+
+    Habrá precios diferentes para los socios. Dado que los socios de IEEE se exige que sea gratis, se propone que los socios de número su cuota sea ninguna siempre.
+
+    Se aprueba por unanimidad los nuevos tipos de socios.
+
+    \subsection{Cambios en los estatutos}
+    Se aprueba por unanimidad el cambio de género a uno neutro.
+
+    Se aprueba por unanimidad el cambio del periodo de antelación con la que se da a conocer una asamblea.
+    Se hace mención también del cambio de domicilio aprobada en la asamblea extraordinara de septiembre.
+
+    \subsection{Elecciones}
+    Se da a conocer la dimisión del actual tesorero Julian Fernandez Ortiz. Se aprueba por unanimidad el puesto de tesorería a: Javier Hidalgo Atienza.
+
+    Se aprueba por unanimidad los puestos de vocalía a: Jesús Rodriguez Venzal, Pilar López Varo y Laura Hinojosa Vico.
+
+    \subsection{Analisis general de la rama}
+    Comienza una mesa redonda sobre el estado general de la asociacion.
+
+    Sulaimane exponse las actividades que se realizaorn para la hora del codigo con la asociacion Granada Acoge.
+
+    Pilar propone dar cursos de programación y electrónica a los de primero de los grados.
+
+    Laura hace enfásis en dar visibilidad a la rama y comunicar cualquier evento organizado y en el que se participe.
+
+    Benito plantea el uso de una plataforma educativa como edX para impartir cursos gratuitos on-line. Así como da a conocer su intención de importir unas jornadas sobre ingeniería inversa aplicada a videojuegos.
+
+    \clearpage
+    Siendo las 12:49 horas del mismo día se da por terminada la sesión.
+
+    A \Date.
+    \vspace{10mm}
+    \ctable[pos = h, width = 140 mm]{XX}{}{
+        El Secretario & VB del Presidente \NN
+                      &                   \NN
+                      &                   \NN
+                      &                   \NN
+                      &                   \NN
+                      &                   \NN
+                      &                   \NN
+        Fdo.: \Author & Fdo.: Sulaimane Mezzouji
+    }
+\end{document}
