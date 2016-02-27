@@ -1,0 +1,254 @@
+% Copyright (c) 2015 IEEE Student Branch of Granada - All Rights Reserved.
+% This work is licensed under the Creative Commons Attribution 4.0
+% International License. To view a copy of this license, visit
+% http://creativecommons.org/licenses/by/4.0/.
+
+% Template
+\documentclass[12pt,twoside,openany,a4paper]{book}
+\pdfoutput=1
+
+% Margins
+\usepackage[a4paper,top=1cm,bottom=6cm]{geometry}
+
+% Paragraphs
+\usepackage{parskip}            % For paragraph separation
+\setlength{\parindent}{15pt}    % Paragraph indentation
+\widowpenalties=1 10000         % No page break in inside pragraph
+\raggedbottom{}
+
+% Font
+\usepackage[T1]{fontenc}        % Output font
+\usepackage[utf8]{inputenc}     % Input encoding
+\usepackage[english,spanish]{babel} % For Spanish texts
+\usepackage{FiraSans}           % Use a better font
+
+% Extra packages
+\usepackage{graphicx}           % For graphics
+\usepackage{verbatim}           % For non-parsed text blocks
+\usepackage{microtype}          % Improve PDF text lines
+\usepackage{indentfirst}        % Indent first paragraph too
+\usepackage{hyperref}           % For intenal and external links
+\usepackage[hypcap]{caption}    % For captions
+\usepackage{ctable}             % For tables
+\usepackage{float}              % For table positions
+\usepackage{subcaption}         % For subfigures
+\usepackage{fancyhdr}           % For headers and footers
+\usepackage{xcolor}             % Colors everywhere
+\usepackage{titlesec}           % For customize the title format
+
+% Document properties
+\makeatletter
+\author{Benito Palacios Sánchez}      \let\Author\@author
+\title{Reunión de la Junta Directiva} \let\Title\@title
+\date{24 de octubre de 2015}          \let\Date\@date
+\makeatother
+
+\hypersetup{
+    pdfauthor = {\Author},
+    pdftitle  = {\Title},
+    pdfsubject  = {},
+    pdfkeywords = {meeting, ieee},
+    pdfcreator  = {TeXLive distro and Atom text editor},
+    pdfproducer = {pdflatex}
+}
+
+% Define custom colors
+\definecolor{BlueTitle}{HTML}{2E5395}
+
+% Define the style for header and footer
+\newcommand{\fncymain}{%
+    \setlength{\headheight}{85pt}
+    \fancyhead[RO,LO,RE,LE]{}
+    \fancyhead[C]{
+        \includegraphics[height=0.10\textheight,keepaspectratio]
+            {../logo_header.png}}
+    \renewcommand{\headrulewidth}{0pt}
+
+    \fancyfoot[C]{
+        \centering
+        \textbf{IEEE Student Branch of Granada} \\
+        Campus Fuentenueva. Facultad de Ciencias. Severo Ochoa, S/N. \\
+        Sala de alumnos. 18001, Granada, España. \\
+        E-mail: \href{mailto:ieeegranada@ieee.org}{ieeegranada@ieee.org}  \\
+        Web: \url{http://ieee-urg.org}
+    }
+}
+
+% Create the document title
+\renewcommand{\maketitle}{
+    {
+        \Huge
+        \color{BlueTitle}
+        \centering
+        \bfseries
+        \scshape
+        \hrulefill \\
+        \Title \\
+        \hrulefill
+    }
+}
+
+% Set the section format
+\titleformat{\section}[display]{
+    \LARGE
+    \color{BlueTitle}
+    \filcenter
+    \bfseries
+    \scshape
+    }{}{0pt}{}[{\titlerule[1pt]}]
+
+% Set only one number for subsections
+\renewcommand{\thesubsection}{\arabic{subsection}}
+
+% Start!
+\begin{document}
+    % Page style
+    \pagestyle{fancy}
+    \fncymain{}
+
+    % Add the title
+    \maketitle
+
+    % Date, participantes and location info.
+    En Granada, siendo las 15:57 horas del \Date~se encuentran reunidos:
+    \begin{itemize}
+        \item Benito Palacios Sánchez
+        \item Sulaimane Mezzouji
+        \item Julián Fernández Ortiz
+    \end{itemize}
+
+    Asiste como invitada Laura Hinojosa Vigo.
+
+
+    \section{Orden del día}
+    \begin{enumerate}
+        \item Organización usando Trello
+        \item Nuevo responsable en Imagen y Comunicación
+        \item Propuesta de la responsable en Imagen y Comunicación
+        \item Solicitud de nuevos proyectos
+        \item Impresora 3D
+        \item Proyecto Eva
+        \item Proyecto Wall-E
+        \item Correo oficial
+        \item Tesorería
+        \item Merchandasing
+        \item Ayudas para la rama
+        \item Valeo Challenge
+        \item La hora del código
+        \item Registro de socios
+        \item Cuota de membresía
+        \item Uniservicios
+        \item Ofertas de clases de inglés
+    \end{enumerate}
+
+
+    \section{Desarrollo de la sesión}
+    \subsection{ Organización usando Trello}
+    Julián propone que el secretario realice el borrador en Trello. Para ello se realizará una tarjeta por punto a discutir en la reunión y se describirá como un comentario la discusión tenida en la reunión.
+
+    Se aprueba por unanimidad.
+
+    \subsection{Nuevo responsable en Imagen y Comunicación}
+    Sulaimane propone un nuevo repsonsable en las tareas de imagen y comunicación de la rama. Las funciones de dicha persona serían:
+    \begin{itemize}
+        \item Responsabilizarse de las redes sociales Facebook y Twitter.
+        \item Impulsar y dar una nueva imagen.
+        \item Mantener e impulsar la página web.
+        \item Participar dentro de la Junta Directiva sin derecho a voto.
+        \item Asistir a la reuniones de la Junta Directiva excepto por causa justificada.
+        \item Asistir a los eventos de la rama para realizar sus funciones.
+    \end{itemize}
+
+    Además, no será necesario que sea miembro de IEEE al tratarse de una tarea que queda fuera de su ámbito. Se ruega que los miembros que colaboren con dicha persona en la difusión de actividades.
+
+    Sulaimane propone como candidata a Laura Hinojosa Vico. Tras la votación se aprueba por unanimidad tanto el puesto como la candidata. Se le da la bienvenida a la Junta Directiva y se incorpora inmediatamente a sus funciones teniendo voz en lo que sucede de reunión.
+
+    \subsection{Propuesta de la responsable en Imagen y Comunicación}
+    La nueva responsable explica los puntos en los que trabajará:
+    \begin{itemize}
+        \item Captación de nuevos socios.
+        \item Patrocinio de la rama
+        \item Vídeos promocionales
+        \item Rediseñar la página web
+        \item Hacer públicos los estatus
+        \item Actualizar la lista de miembros de la Junta Directiva
+        \item Crear un blog donde los responsables de los proyectos puedan describir el estado.
+    \end{itemize}
+
+    \subsection{Solicitud de nuevos proyectos}
+    Los socios de la rama tendrán acceso a un área restringida desde donde podrán acceder a los documentos de la rama. Uno de ellos será el de propuesta de nuevos proyectos.
+
+    Los proyectos serán aprobados por la Junta Directiva según duración, presupuesto y ámbito. Se ruega que haya más proyectos informáticos. Será la presona responsable del proyecto quién rellene el formulario y aporte todos los datos necesarios como presupuesto, requisitos y número de participantes. Definirá así mismo el título y descripción y proporcionará informes verbales o escrito a la Junta Directiva.
+
+    Cada proyecto tendrá reuniones periódicas en las cuales será necesario un nivel de asistencia para la continuidad del socio en el proyecto. El responsable las supervisará. Desde la Junta Directiva se apoyará en la medida de lo posible buscando aulas y dando difusión.
+
+    \subsection{Impresora 3D}
+    La impresora 3D está operativa. Se propone continuar el desarrollo de este proyecto con las siguientes características:
+    \begin{itemize}
+        \item Añadir otro extrusor.
+        \item Mejorar la calibración.
+        \item Aprendizaje de la impresión 3D.
+    \end{itemize}
+
+    Se rechaza la propuesta por unanimidad para concetrarse en los otros proyectos activos.
+
+    \subsection{Proyecto Eva}
+    El responsable del proyecto del dron será Sulaimane. Actualmente hay 12 personas trabajando en él. Se trata de un proyecto coordinado con la Asociación Electrial en el que miembros de ambas asociaciones pueden participar. Se propone reducir los participantes a aquellos activos con un máximo de 6 personas.
+
+    \subsection{Proyecto Wall-E}
+    El responsable del proyecto de brazo robótico será Julián. Hay un total de 5 personas trabajando en él actualmente.
+
+    \subsection{Correo oficial}
+    Se informa que el correo oficial de la rama es \texttt{ieeegranada\@ieee.org}. Sulaimane será el responsable de mantener dicho correo.
+
+    \subsection{Tesorería}
+    Se ruega al tesorero que realice un inventario. Además que se cambie la dirección de la nueva sede.
+
+    \subsection{Polos de la rama}
+    La responsable de Imagen y Comunicación aprueba el desarrollo de polos con el logo de la rama. Se coordinará con los interesados.
+
+    \subsection{Ayudas para la rama}
+    Las ayudas que la rama tiene a su disposición vienen tanto de IEEE como del vicerrectorado de estudiantes. Se propone seguir su proceso.
+
+    \subsection{Valeo Challenge}
+    Se trata de una competición de estudiantes para aportar ideas que se implementarán en coches del futuro. Se divulgará la competición y coordinará a los interesados. No se trataría de limitarla a miembros de IEEE pero a un ámbito universitario global de Granada.
+
+    \subsection{La hora del código}
+    La hora del código es un evento a nivel mundial en el cual durante una semana se organizan eventos para enseñar a programar a los niños. Desde la rama se propone realizar un evento junto a la Oficina de Software Libre de la universidad. Será entre el 9 y 13 de diciembre.
+
+    \subsection{Registro de socios}
+    Se propone hacer una base de datos de socios, donde se pueda consultar las actividades que se realizan. Se propone que el procedimiento para formar parte de la rama sea mediante un formulario web. Desde este, los miembros de IEEE aportarán sus datos de contacto y la junta directiva contactará con ellos.
+
+    \subsection{Cuota de membresía}
+    En la Junta Directiva anterior se había aprobado la cuota de membresía de un euro. Se propone que dado que hay que ser miembro de IEEE con una cuota anual de entorno a 24 euros, revocar la cuota de la rama de un euro. Se aprueba por unanimidad.
+
+    \subsection{Uniservicios}
+    Se propone investigar vías para participar en la revista de la universidad con el objetivo de dar a conocer las actividades de la rama.
+
+    \subsection{Ofertas de clases de inglés}
+    Se ha recibido una oferta de clases de inglés con descuento para los socios de la rama. Se difundirá por e-mail y se coordinará con los interesados para participar.
+
+    \section{Ruegos, sugerencias y preguntas}
+    \begin{itemize}
+        \item Sulaimane ruega al secretario que realice los documentos de las actas. La respuesta fue que debido a la organización y preparación del evento IEEEXtreme 9.0 no se pudo dedicar tiempo a dichas tareas.
+
+        \item Benito muestra su queja de haber organizado una reunión de junta directiva sin previo aviso y durante la celebración del evento IEEEXtreme 9.0, del cual es participante.
+    \end{itemize}
+
+
+    \clearpage
+    Siendo las 17:16 horas del mismo día se da por terminada la sesión.
+
+    A \Date.
+    \vspace{10mm}
+    \ctable[pos = h, width = 140 mm]{XX}{}{
+        El Secretario & VB del Presidente \NN
+                      &                   \NN
+                      &                   \NN
+                      &                   \NN
+                      &                   \NN
+                      &                   \NN
+                      &                   \NN
+        Fdo.: \Author & Fdo.: Sulaimane Mezzouji
+    }
+\end{document}
