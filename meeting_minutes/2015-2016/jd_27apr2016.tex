@@ -1,0 +1,182 @@
+% Copyright (c) 2016 IEEE Student Branch of Granada - All Rights Reserved.
+% This work is licensed under the Creative Commons Attribution 4.0
+% International License. To view a copy of this license, visit
+% http://creativecommons.org/licenses/by/4.0/.
+
+% Template
+\documentclass[12pt,twoside,openany,a4paper]{book}
+\pdfoutput=1
+
+% Margins
+\usepackage[a4paper,top=1cm,bottom=6cm]{geometry}
+
+% Paragraphs
+\usepackage{parskip}            % For paragraph separation
+\setlength{\parindent}{15pt}    % Paragraph indentation
+\widowpenalties=1 10000         % No page break in inside pragraph
+\raggedbottom{}
+
+% Font
+\usepackage[T1]{fontenc}        % Output font
+\usepackage[utf8]{inputenc}     % Input encoding
+\usepackage[english,spanish]{babel} % For Spanish texts
+\usepackage{FiraSans}           % Use a better font
+
+% Extra packages
+\usepackage{graphicx}           % For graphics
+\usepackage{verbatim}           % For non-parsed text blocks
+\usepackage{microtype}          % Improve PDF text lines
+\usepackage{indentfirst}        % Indent first paragraph too
+\usepackage{hyperref}           % For intenal and external links
+\usepackage[hypcap]{caption}    % For captions
+\usepackage{ctable}             % For tables
+\usepackage{float}              % For table positions
+\usepackage{subcaption}         % For subfigures
+\usepackage{fancyhdr}           % For headers and footers
+\usepackage{xcolor}             % Colors everywhere
+\usepackage{titlesec}           % For customize the title format
+
+% Document properties
+\makeatletter
+\author{Benito Palacios Sánchez}     \let\Author\@author
+\title{Junta Directiva}              \let\Title\@title
+\date{27 de abril de 2016}           \let\Date\@date
+\makeatother
+
+\hypersetup{
+    pdfauthor = {\Author},
+    pdftitle  = {\Title},
+    pdfsubject  = {},
+    pdfkeywords = {meeting, ieee},
+    pdfcreator  = {TeXLive distro and Atom text editor},
+    pdfproducer = {pdflatex}
+}
+
+% Define custom colors
+\definecolor{BlueTitle}{HTML}{2E5395}
+
+% Define the style for header and footer
+\newcommand{\fncymain}{%
+    \setlength{\headheight}{85pt}
+    \fancyhead[RO,LO,RE,LE]{}
+    \fancyhead[C]{
+        \includegraphics[height=0.10\textheight,keepaspectratio]
+            {../logo_header.png}}
+    \renewcommand{\headrulewidth}{0pt}
+
+    \fancyfoot[C]{
+        \centering
+        \textbf{IEEE Student Branch of Granada} \\
+        Campus Fuentenueva. Facultad de Ciencias. Severo Ochoa, S/N. \\
+        Sala de alumnos. 18001, Granada, España. \\
+        E-mail: \href{mailto:ieeegranada@ieee.org}{ieeegranada@ieee.org}  \\
+        Web: \url{http://ieee-urg.org}
+    }
+}
+
+% Create the document title
+\renewcommand{\maketitle}{
+    {
+        \Huge
+        \color{BlueTitle}
+        \centering
+        \bfseries
+        \scshape
+        \hrulefill \\
+        \Title \\
+        \hrulefill
+    }
+}
+
+% Set the section format
+\titleformat{\section}[display]{
+    \LARGE
+    \color{BlueTitle}
+    \filcenter
+    \bfseries
+    \scshape
+    }{}{0pt}{}[{\titlerule[1pt]}]
+
+% Set only one number for subsections
+\renewcommand{\thesubsection}{\arabic{subsection}}
+
+% Start!
+\begin{document}
+    % Page style
+    \pagestyle{fancy}
+    \fncymain{}
+
+    % Add the title
+    \maketitle
+
+    % Date, participantes and location info.
+    En Granada, siendo las 20:15 horas del \Date~se encuentran reunidos:
+    \begin{itemize}
+        \item Sulaimane Mezzouji
+        \item Julián Fernández
+        \item Laura Hinojosa
+        \item Rubén Martín
+        \item Pilar López
+    \end{itemize}
+
+    \section{Orden del día}
+    \begin{enumerate}
+        \item Puesta al día del trabajo realizado por cada miembro.
+        \item Informe del Director.
+        \item Objetivos para la siguiente semana.
+    \end{enumerate}
+
+
+    \section{Desarrollo de la sesión}
+    \subsection{Puesta al día del trabajo realizado por cada miembro}
+    Cada miembro presenta los objetivos que tenía marcados de la semana pasada y los progresos realizados sobre ellos.
+    \begin{itemize}
+        \item Laura ha creado la plantilla para los documentos y los correos de la rama.
+        \item Rubén ha informado que no se puede presentar los proyectos de la rama en el día de Puertas abiertas del Parque de las Ciencias debido a que se ha hecho la petición fuera de plazo. Además, Rubén ha presentado en la reunión la lista de  los correos de los coordinadores de los grados para incluirlas en las listas posibles de difusión de eventos de la rama.
+        \item Julián ha presentado el protocolo de qué es y de cómo organizarse con Trello.
+        \item Pilar ha presentado el protocolo de la información básica sobre el IEEE que se les puede proporcionar a los nuevos miembros del IEEE.
+    \end{itemize}
+
+    \subsection{Informe del Director}
+    Javier Hidalgo deja la tesorería. Rubén Martín pasa a ser el tesorero de la junta de dirección.
+
+    El director ha informado que el drive de ieeegranada@ieee.org está organizado y en él se guardan:
+    \begin{itemize}
+        \item Los protocolos de los distintos roles de las personas que forman la rama de IEEE: funciones de director, vicedirector, secretario y tesorero.
+        \item En la carpeta se encuentra un manual descriptivo de los procedimientos a seguir en la rama: difusión de talleres, correos de distribución, datos generales de la rama, eNotice, modificación de estatutos, SAMIEEE.
+        \item Plantillas para escribir papeles de la rama.
+        \item La contabilidad de todos los años de la rama al día. En dicha carpeta también deberán de guardarse informes que justifiquen cada gasto
+        \item Actas del secretario.
+        \item Formularios múltiples, petición de proyectos, actividades.
+    \end{itemize}
+
+    También se ha informado de que se ha pedido el sello para la rama. Ha informado que el tesorero ya ha pedido los polos. Además Laura está terminando de diseñar las tarjetas identificadoras para cada miembro.
+
+    \subsection{Objetivos para la siguiente semana}
+    \begin{itemize}
+        \item Julián: Adaptar el Trello al protocolo realizado (Vinculando ambos)
+        \item Laura: Seguir trabajando en las plantillas. Hacer protocolo de difusión. Introducción de video IEEE y flyers informativo en 3 formatos (Ejemplo SAAB). Tarjetas IEEE.
+        \item Rubén: Terminar lista de responsables de los Grados y terminar tesorería.
+        \item Pilar: Enviar protocolo sobre IEEE y hacer protocolo de grupos.
+        \item Sulaimane: tiene ya suficiente trabajo.
+    \end{itemize}
+
+    \section{Ruegos, sugerencias y preguntas}
+    Ninguna.
+
+    \clearpage
+    Siendo las 21:04 horas del mismo día se da por terminada la sesión.
+
+    A \Date.
+    \vspace{10mm}
+    \ctable[pos = h, width = 140 mm]{XX}{}{
+        El Secretario & VB del Presidente \NN
+                      &                   \NN
+                      &                   \NN
+                      &                   \NN
+                      &                   \NN
+                      &                   \NN
+                      &                   \NN
+        Fdo.: \Author & Fdo.: Sulaimane Mezzouji
+    }
+\end{document}
