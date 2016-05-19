@@ -1,0 +1,175 @@
+% Copyright (c) 2015 IEEE Student Branch of Granada - All Rights Reserved.
+% This work is licensed under the Creative Commons Attribution 4.0
+% International License. To view a copy of this license, visit
+% http://creativecommons.org/licenses/by/4.0/.
+
+% Template
+\documentclass[12pt,twoside,openany,a4paper]{book}
+\pdfoutput=1
+
+% Margins
+\usepackage[a4paper,top=1cm,bottom=6cm]{geometry}
+
+% Paragraphs
+\usepackage{parskip}            % For paragraph separation
+\setlength{\parindent}{15pt}    % Paragraph indentation
+\widowpenalties=1 10000         % No page break in inside pragraph
+\raggedbottom{}
+
+% Font
+\usepackage[T1]{fontenc}        % Output font
+\usepackage[utf8]{inputenc}     % Input encoding
+\usepackage[english,spanish]{babel} % For Spanish texts
+\usepackage{FiraSans}           % Use a better font
+
+% Extra packages
+\usepackage{graphicx}           % For graphics
+\usepackage{verbatim}           % For non-parsed text blocks
+\usepackage{microtype}          % Improve PDF text lines
+\usepackage{indentfirst}        % Indent first paragraph too
+\usepackage{hyperref}           % For intenal and external links
+\usepackage[hypcap]{caption}    % For captions
+\usepackage{ctable}             % For tables
+\usepackage{float}              % For table positions
+\usepackage{subcaption}         % For subfigures
+\usepackage{fancyhdr}           % For headers and footers
+\usepackage{xcolor}             % Colors everywhere
+\usepackage{titlesec}           % For customize the title format
+
+% Document properties
+\makeatletter
+\author{Benito Palacios Sánchez}     \let\Author\@author
+\title{Junta Directiva}        \let\Title\@title
+\date{10 de mayo de 2016}         \let\Date\@date
+\makeatother
+
+\hypersetup{
+    pdfauthor = {\Author},
+    pdftitle  = {\Title},
+    pdfsubject  = {},
+    pdfkeywords = {meeting, ieee},
+    pdfcreator  = {TeXLive distro and Atom text editor},
+    pdfproducer = {pdflatex}
+}
+
+% Define custom colors
+\definecolor{BlueTitle}{HTML}{2E5395}
+
+% Define the style for header and footer
+\newcommand{\fncymain}{%
+    \setlength{\headheight}{85pt}
+    \fancyhead[RO,LO,RE,LE]{}
+    \fancyhead[C]{
+        \includegraphics[height=0.10\textheight,keepaspectratio]
+            {../logo_header.png}}
+    \renewcommand{\headrulewidth}{0pt}
+
+    \fancyfoot[C]{
+        \centering
+        \textbf{IEEE Student Branch of Granada} \\
+        Campus Fuentenueva. Facultad de Ciencias. Severo Ochoa, S/N. \\
+        Sala de alumnos. 18001, Granada, España. \\
+        E-mail: \href{mailto:ieeegranada@ieee.org}{ieeegranada@ieee.org}  \\
+        Web: \url{http://ieee-urg.org}
+    }
+}
+
+% Create the document title
+\renewcommand{\maketitle}{
+    {
+        \Huge
+        \color{BlueTitle}
+        \centering
+        \bfseries
+        \scshape
+        \hrulefill \\
+        \Title \\
+        \hrulefill
+    }
+}
+
+% Set the section format
+\titleformat{\section}[display]{
+    \LARGE
+    \color{BlueTitle}
+    \filcenter
+    \bfseries
+    \scshape
+    }{}{0pt}{}[{\titlerule[1pt]}]
+
+% Set only one number for subsections
+\renewcommand{\thesubsection}{\arabic{subsection}}
+
+% Start!
+\begin{document}
+    % Page style
+    \pagestyle{fancy}
+    \fncymain{}
+
+    % Add the title
+    \maketitle
+
+    % Date, participantes and location info.
+    En Granada, siendo las 20:00 horas del \Date~se encuentran reunidos:
+    \begin{itemize}
+        \item Sulaimane Mezzouji
+        \item Julián Fernández
+        \item Laura Hinojosa
+        \item Pilar López
+    \end{itemize}
+
+    Asiste como invitado Mustapha Bouziane.
+
+    \section{Orden del día}
+    \begin{enumerate}
+        \item Puesta al día del trabajo realizado por cada miembro.
+        \item Informe del director.
+    \end{enumerate}
+
+
+    \section{Desarrollo de la sesión}
+    \subsection{Puesta al día del trabajo realizado por cada miembro}
+    Cada miembro presenta los objetivos que tenía marcados de la semana pasada y los progresos realizados sobre ellos. Julián ha elaborado el formulario para presentar candidatura a junta general. Ha terminado el protocolo de organización de Trello. Ha puesto el logotipo de la rama en la imagen del perfil de Twitter y Facebook. Pilar ha explicado la propuesta de la organización de un concurso con los robots de Lego a través de la plataforma de FLL First LEGO League. Laura ha seguido trabajando en las plantillas y en el protocolo de difusión. Ha terminado los flyers informativos.
+
+    \subsection{Informe del director}
+    El 7 de mayo fue el aniversario de la formación de la Rama del IEEE y propone que a posteriori se organice un evento.
+    Comunica que el 29 y 30 de septiembre se van a realizar unas Jornadas de Sostenibilidad en la Facultad de Caminos. Los organizadores de las jornadas han pedido a la rama que se les de publicidad y se les proporcione voluntarios.
+    También ha explicado en general el orden del día para la Asamblea general del 20 de Mayo:
+    \begin{itemize}
+        \item Actividades que se han realizado y mejoras,
+        \item Julián, Sulaimane y David presentarán lo de los proyectos: Eva, Drone y la impresora 3D.
+        \item Rubén presentará los presupuestos.
+    \end{itemize}
+
+    El director ha informado sobre el estado del arte de los polos. Tras presentar imperfecciones en el logo bordado se va a proceder a preguntar a la empresa si se puede hacer devolución. En caso de que se pueda devolver, se les preguntará a los socios si desean o no que se devuelvan los polos y si se prefiere que se realice en otra empresa.
+
+    \section{Ruegos, sugerencias y preguntas}
+    Julián ha sugerido que se cambien todas las portadas de todas las aplicaciones que tenemos en las redes sociales. Laura se encargará de ello.
+    Julián ha preguntado sobre con qué frecuencia se debe de publicar en las redes sociales. Se ha acordado que ha medida de que salgan actividades que es como se ha hecho hasta ahora.
+
+    Objetivos para la semana que viene:
+    \begin{itemize}
+        \item Julián: Documentos para las elecciones y elaboración de carta de continuidad a patrocinadores.
+        \item Laura: Imágenes para redes sociales. Introducción de video IEEE. Hacer una nota de prensa para medios de comunicación como por ejemplo para la newsletter de la región 8.
+        \item Pilar: Contactar con los del PTS para la realización del concurso de los robot de LEGO. Firmar lo que se realiza según el estatuto de Vocalía.
+        \item Rubén: Terminar informes de tesorería (e informe de los polos).
+        \item Benito: Informe y propuestas de mejora sobre el curso del ROM Hacking.
+        \item Sulaimane: convocatoria para elección de qué hacer con los polos y presentación de EVA y de la impresora.
+    \end{itemize}
+
+    \clearpage
+    Siendo las 20:50 horas del mismo día se da por terminada la sesión.
+
+    A \Date.
+    \vspace{10mm}
+    \ctable[pos = h, width = 140 mm]{XX}{}{
+        El Secretario & VB del Presidente \NN
+                      &                   \NN
+                      &                   \NN
+                      &                   \NN
+                      &                   \NN
+                      &                   \NN
+                      &                   \NN
+        Fdo.: \Author & Fdo.: Sulaimane Mezzouji
+    }
+\end{document}
